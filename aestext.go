@@ -88,7 +88,7 @@ func DecText(dataToDecrypt string, decryptionKey string) string {
 		// Return the string decryption_error if there is an error decrypting the data
         decryptionError := "decryption_error"
         return decryptionError
+	} else {
+		return string(decryptedString)
 	}
-
-	return string(decryptedString)
 }
