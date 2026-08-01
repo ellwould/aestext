@@ -85,9 +85,9 @@ func DecText(dataToDecrypt string, decryptionKey string) string {
 
 	decryptedString, err := gcm.Open(nil, []byte(numberOnce), []byte(ciphertext), nil)
 	if err != nil {
-		// Return an empty string if there is an error decrypting the data
-        empty := ""
-        return empty
+		// Return the string decryption_error if there is an error decrypting the data
+        decryptionError := "decryption_error"
+        return decryptionError
 	}
 
 	return string(decryptedString)
